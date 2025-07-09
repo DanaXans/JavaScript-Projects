@@ -1,12 +1,12 @@
 /*#dYQNrBV*/
-let text1 = "hello";
-console.log(text1);
-let text2 = "owu";
-console.log(text2);
-let text3 = "com";
-console.log(text3);
-let text4 = "ua";
-console.log(text4);
+let TXT1 = "hello";
+console.log(TXT1);
+let TXT2 = "owu";
+console.log(TXT2);
+let TXT3 = "com";
+console.log(TXT3);
+let TXT4 = "ua";
+console.log(TXT4);
 
 let num = 1;
 console.log(num);
@@ -16,12 +16,12 @@ let num2 = -999;
 console.log(num2);
 let num3 = 123;
 console.log(num3);
-let n1 = 3.14;
-console.log(n1);
-let n2 = 2.7;
-console.log(n2);
-let n3 = 16;
-console.log(n3);
+let num4 = 3.14;
+console.log(num4);
+let num5 = 2.7;
+console.log(num5);
+let num6 = 16;
+console.log(num6);
 
 let TR = true;
 console.log(TR);
