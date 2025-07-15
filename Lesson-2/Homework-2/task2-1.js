@@ -102,7 +102,7 @@ console.log(users[9].password);
 
 
 /*coYydZuaeEB*/
-let week =[
+let weekTemp =[
     {
         day: 'monday', values: {
             morning: 25,

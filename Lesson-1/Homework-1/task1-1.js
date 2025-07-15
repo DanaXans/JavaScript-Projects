@@ -1,12 +1,12 @@
 /*#dYQNrBV*/
-let TXT1 = "hello";
-console.log(TXT1);
-let TXT2 = "owu";
-console.log(TXT2);
-let TXT3 = "com";
-console.log(TXT3);
-let TXT4 = "ua";
-console.log(TXT4);
+let message1 = "hello";
+console.log(message1);
+let message2 = "owu";
+console.log(message2);
+let message3 = "com";
+console.log(message3);
+let message4 = "ua";
+console.log(message4);
 
 let num = 1;
 console.log(num);
@@ -23,10 +23,10 @@ console.log(num5);
 let num6 = 16;
 console.log(num6);
 
-let TR = true;
-console.log(TR);
-let FL = false;
-console.log(FL);
+let booleanTrue = true;
+console.log(booleanTrue);
+let booleanFalse = false;
+console.log(booleanFalse);
 
 /*#6Qb97gsv*/
 let firstName = "Богдана";
