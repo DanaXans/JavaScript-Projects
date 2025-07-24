@@ -237,11 +237,11 @@ else if (a === b) {
 
 
 /*iBvqtjEm*/
-let X = 1;
+let X ;
 if ( !X ) {
     X = 'default';
 }
-
+console.log(X);
 
 /*awLXL6TBzg*/
 let coursesAndDurationArray = [
