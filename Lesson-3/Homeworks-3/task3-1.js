@@ -41,7 +41,7 @@ let products = [
     {
         title: 'milk',
         price: 22,
-        image: 'https://www.mcqueensdairies.co.uk/wp-content/uploads/2019/02/Mcqueens_1litre_whole_organic-300×300-3.jpg'
+        image: 'https://content.rozetka.com.ua/goods/images/big/347125351.jpg'
     },
 {
     title: 'juice',
@@ -56,7 +56,7 @@ let products = [
 {
     title: 'tea',
     price: 15,
-    image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront'
+    image: 'https://content.rozetka.com.ua/goods/images/big/243002016.png'
 },
 ];
 for (const product of products) {
@@ -110,6 +110,3 @@ for (const user of users) {
         console.log(user);
     }
 }
-
-
-/*=============*/
