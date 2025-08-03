@@ -17,6 +17,8 @@ function roundObject(radius) {
     return Math.PI * radius * radius;
 }
 
+console.log(roundObject(20));
+
 
 /*Mbiz5K4yFe7*/
 
@@ -37,6 +39,7 @@ function arr(array) {
     }
 }
 
+arr([12, 13, 14, 15]);
 
 /*59g0IsA*/
 
