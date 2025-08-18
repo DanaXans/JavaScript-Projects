@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //функции string
+
+
+    let str = 'hello okten';
+
+    console.log(str[0]);//string воспринимается, как массив символов
+    for (const strElement of str) {
+        console.log(strElement);//итерируем string
+    }
+    //string примитив и референциальный тип
+
+    //методы обьектов:
+    let s = str.concat('!!!');//добавляет новое значение не меняя сам обьект
+    console.log(s);
+
+    console.log(str.toUpperCase());//заменяет обьект, делая его нашей же string, но в ВЕРХНЕМ регистре
+    console.log(str.toLowerCase());//заменяет обьект, делая его нашей же string, но в НИЖНЕМ регистре
+
+    console.log(str.startsWith('hell'));//позволяет передать секвенцию символов, с которых может начинаться string
+    console.log(str.endsWith('ten'));//реверсивная версия startsWith
+
+    console.log(str.substring(0, 7));//метод который принимает аргументы. первый аргумент это стартовая позиция
+    // , на которой мы обрезаем string , а второй это позиция end, на которой мы заканчиваем
+
+    console.log(str.indexOf('h'));//показываем под каким индексом поточный символ находится в стринге, от наччала и до конца
+    console.log(str.lastIndexOf('o'));
+    console.log(str.indexOf('o', 5));//покажет в какой позиции находится елемент
+
+    console.log(str.charAt(8));//принимает, как аргумент числовое значение, которое при вводе индекса выводит символ
+
+    console.log(str.replace('e', '!'));//позволяет заменить какой-то выбранный символ на другой
+    console.log(str.replaceAll('e', '!'));//можно заменить все такие же символы. или сиквенцию символов
+
+    let split = str.split(' ');
+    console.log(split);//позволяет разделить на части стрингу
+</script>
+</body>
+</html>
