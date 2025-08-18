@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Массивы
+
+    let arr;
+    //           0         1          2         3       4
+    arr = [123, 345, 678, -123, 3.14];
+    console.log(arr[3]);
+    console.log(arr.length); //length-длинна
+
+    //если мы хотим заменить елемент массива:
+    arr[0] = 'new element'
+    console.log(arr[0]);
+
+    //если мы хотим добавить новый елемент, то учитываем длинну, в данном случае(arr.length=4),
+    // не смотря на то, что елементов 5, т.к индексация начинается с 0
+    arr[5] = true;
+    console.log(arr);
+
+    //если мы хотим добавлять елемент в конец массива, не смотря на длинну массива, то прописываем:
+    arr[arr.length] = false;
+    console.log(arr);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Логичные разветвления if
+
+    //в скобках должено быть условие = boolean(true,false)
+    //if (true) {
+    //   console.log('test');
+    // }
+
+    let color = 'green'
+    if (color === 'green') {
+        console.log('stop!');
+    } else //блок, котрый сработает в случае, если блок let даст нам false
+    {
+        console.log('go!')
+    }
+
+
+    let age = +prompt('enter your age:')//prompt-всплывающее модальное окно
+    if (age >= 18) {
+        console.log('adult content')
+    } else {
+        console.log('cartoon')
+    }
+
+
+    let colorLine = prompt('enter color:')
+    if (colorLine === 'green!'&&confirm('is road clear?')) {//если мы выводим false confirm, то остальной блок кода игнорируеться
+        console.log('go!');
+
+        //  if (confirm('is road clear?')) {
+        //  console.log('go')
+        // } else {
+        //     console.log('just wait')
+        //  }
+    } else if (colorLine === 'orange') {
+        console.log('wait!');
+    } else if (colorLine === 'red') {
+        console.log('stop!');
+    } else {
+        console.log('what???');
+    }
+</script>
+</body>
+</html>

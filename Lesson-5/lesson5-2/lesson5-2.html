@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Замыкание
+    //Замыкание--это возможность функции держать ссылку на какой то встроенный обьект
+    function asd() {
+        let x = 10;
+
+        function inner() {
+            return ++x;
+        }
+
+        return inner;//вщзвращаем описание inner
+    }
+
+    console.log(asd());//также возвращается описание inner
+
+    //let user = {name: 'Manya', age: 20};
+
+    //мы хотим вытягивать значения name, age, чтобы посмотреть что они из себя представляют. но не менять их!!!
+    function userBuilder(name, age) {
+        let user = {name, age};
+        return {
+            getName() {
+                return user.name
+            },
+            getAge() {
+                return user.age;
+            },
+            setAge(age) {
+                if (age > 0) {
+                    user.age = age;
+                }
+            },
+        }
+    }
+
+    let builder = userBuilder('vasya', 31);
+    console.log(builder);
+    console.log(builder.getName());
+    builder.setAge(100);
+    console.log(builder.getAge());
+</script>
+</body>
+</html>

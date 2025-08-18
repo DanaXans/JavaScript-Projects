@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //массивы с обьектами
+    let users = [
+        {skills: ['html', 'mongo', 'js'], id: 1, name: 'Juan', age: 28, status: true},
+        {id: 2, name: 'Lea', age: 25, status: true},
+        {id: 3, name: 'Marty', age: 30, status: false},
+        {skills: ['html', 'mongo', 'js'], id: 4, name: 'Anna', age: 35, status: true}
+    ]
+    console.log(users);
+    console.log(users[0]);
+    console.log(users[0].age);
+
+    let user1 = users[1];
+    console.log(user1);
+
+    console.log(users[3].skills[1]);//выведем скилл mongo
+</script>
+</body>
+</html>

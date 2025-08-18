@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Цикл for
+    //
+    let usersArray = [
+        {name: 'vasya', age: 28, status: 'online'},
+        {name: 'anna', age: 30, status: 'offline'},
+        {name: 'olya', age: 20, status: 'online'},
+        {name: 'andrey', age: 28, status: 'offline'},
+        {name: 'sasha', age: 25, status: 'online'},
+        {name: 'max', age: 28, status: 'offline'},
+        {name: 'oleg', age: 23, status: 'online'}
+    ];
+    // создаем переменную i(индекс). задаем границы своего цикла. задаем длинну, насколько далеко цикл идет.
+    //for (let i = 0; i < usersArray.length; i++) {
+    //  console.log(usersArray[i]);//мы обращаемся к итерируемого обьекту, то есть к каждому юзеру.
+    //}
+
+
+    for (let i = 0; i < usersArray.length; i++) {
+        document.write(`<div>user info - ${users[i].name}</div>`);//выыведется имя каждого юзера, находящегося в массиве users
+    }
+
+</script>
+</body>
+</html>

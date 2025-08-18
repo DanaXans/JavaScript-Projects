@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Цикл while
+    //отличается от for синтаксической конструкцией, а так очень похожи.
+
+    let usersArray = [
+        {name: 'vasya', age: 28, status: 'online'},
+        {name: 'anna', age: 30, status: 'offline'},
+        {name: 'olya', age: 20, status: 'online'},
+        {name: 'andrey', age: 28, status: 'offline'},
+        {name: 'sasha', age: 25, status: 'online'},
+        {name: 'max', age: 28, status: 'offline'},
+        {name: 'oleg', age: 23, status: 'online'}
+    ];
+    let i = 0;
+    while (i < usersArray.length) {
+        let user = usersArray[i];
+        console.log(user);
+        i++;
+    }
+
+    do {//сначала делаем...
+        console.log('user');
+    } while (false)//...потом проверяем
+</script>
+</body>
+</html>

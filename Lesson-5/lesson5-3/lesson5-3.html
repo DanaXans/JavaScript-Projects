@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Рекурсия
+    //Пример замены рекурсией цикла:
+    function iterator(arr, i) {
+        console.log(arr[i]);
+        i++;
+        if (i < arr.length) {//в рекурсии обязательно условие!
+            iterator(arr, i);
+        }
+    }
+
+    iterator([11, 22, 33], 0);
+
+
+    let arr = [11, 22, 33, [44, 55]];//[11,22,33,44,55]
+    let innerArray = [];
+
+    function flatter(array) {
+        for (const item of array) {
+            if (Array.isArray(item)) {
+                flatter(item);
+            } else {
+                innerArray.push(item);
+            }
+        }
+    }
+flatter(arr);
+
+    console.log(innerArray);
+</script>
+</body>
+</html>

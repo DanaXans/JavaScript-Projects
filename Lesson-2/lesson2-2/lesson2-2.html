@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //многовымерные массивы
+
+    let arr = [
+        //  0   1   2
+        [11, 22, 33],
+        [],
+        []
+    ];
+    //- многовымерный массив, или массив с массивами
+
+    console.log(arr);
+
+    //чтобы обратиться к ячейке в массиве под нулевым индексом, нужно:
+    let innerArr = arr[0];//удобнее будет назвать нужный массив для выведения ячейки.
+
+    //выведем 1 ячейку(..22) в innerArr:
+    console.log(innerArr[1]);//22
+    //или:
+    console.log(arr[0][1]);//22
+</script>
+</body>
+</html>

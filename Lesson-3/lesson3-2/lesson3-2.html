@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Цикл for of
+    //Цикл - синтаксическая конструкция, позволяющая выполнить действие n-е кол-во раз
+    let usersArray = [
+        {name : 'vasya', age: 28, status: 'online'},
+        {name : 'anna', age: 30, status: 'offline'},
+        {name : 'olya', age: 20, status: 'online'},
+        {name : 'andrey', age: 28, status: 'offline'},
+        {name : 'sasha', age: 25, status: 'online'},
+        {name : 'max', age: 28, status: 'offline'},
+        {name : 'oleg', age: 23, status: 'online'}
+    ];
+    debugger;//режим, позволяющий остановиться на этом моменте и далее идти пошагово.
+    for(let user of usersArray) {//user--своеобразный ящик, который мы наполняем данными из массива usersArray.
+        console.log(user.name);
+    }
+</script>
+</body>
+</html>

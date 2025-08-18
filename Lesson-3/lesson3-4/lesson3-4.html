@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Цикл for in
+    //Асоциативный массив -- это массив, в котором существует некоторая ассоциация между определенным ключем  и значене.
+    let user = {
+        id: 1,
+        name: 'John',
+        status: true,
+    }
+    for (let fieldName in user) {
+        console.log(fieldName);//вытягиваем каждое название поля обьекта user
+        console.log(user[fieldName]);//вытягиваем знчение каждого поля
+        console.log(fieldName, user[fieldName]);//вытягиваем название и значение каждого поля
+    }
+
+//проитерируем массив users:
+    let usersArray = [
+        {name: 'vasya', age: 28, status: 'online'},
+        {name: 'anna', age: 30, status: 'offline'},
+        {name: 'olya', age: 20, status: 'online'},
+        {name: 'andrey', age: 28, status: 'offline'},
+        {name: 'sasha', age: 25, status: 'online'},
+        {name: 'max', age: 28, status: 'offline'},
+        {name: 'oleg', age: 23, status: 'online'}
+    ];
+    for (const users of usersArray) {
+
+        for (let fieldName in users) {
+            console.log(fieldName, users[fieldName]);
+        }
+        console.log(' ');
+    }
+//Циклом for of мы перебираем обьекты с массива, а циклом for in перебираем поля массива.
+</script>
+</body>
+</html>

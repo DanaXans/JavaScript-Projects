@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Логические ответвления switch
+    let color = prompt('enter color:');
+
+    switch (color) {// в круглые скобки записываем значение, которое будет сравниваться
+        case 'green':
+            console.log('Go');
+            break;//оператор прерывания
+        case 'yellow':
+            console.log('Wait');
+            break;//если не существует оператора break , то мы будем использовать следующие кейсы, пока не встретим break
+            case 'red':
+                console.log('Stop');
+                break;
+                default:
+                    console.log('What?');
+    }
+    //если нужно сделать множественную проверку, используем switch.
+    // если нужно проверить правдивдив ли варивант, используем if else
+</script>
+</body>
+</html>

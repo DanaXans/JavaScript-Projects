@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //внутренние обьекты
+    let user1 = {
+        id: '1',
+        name: 'Juan',
+        age: 30,
+        skills: ['html', 'js', 'java'],
+        wife: {
+            name: 'Olya',
+            age: 28,
+        }
+    }
+    //как выводить внутренние обьекты
+
+    console.log(user1.id);//первый способ
+    console.log(user1['age']);//второй способ. массиво-подобный способ обращения
+
+    console.log(user1.skills);//выводим массив skills
+    console.log(user1.skills[2]);//выводим ячейку массива skills
+
+    //выведем wife:
+    console.log(user1.wife);
+    //выведем имя wife:
+    console.log(user1.wife.name);
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //разница между примитивами и референциальными типами
+
+    //примитивные типы данных:
+    //number, string, boolean
+    //примитивные типы данных-это ячейки, которые при копировании отдают свое значение.
+    let a = 100;
+    let b = a;
+    b = b + 10;//110
+    console.log(a);//a=100
+
+    let user = {name: 'vasya'};
+    let user2 = user;
+    user2.age = 20;
+    console.log(user2);
+    //если мы привнесем изменения в user2, то они произойдут и в user, т.к обьекты и массивы это ссылочные типы данных
+    console.log(user);
+    //ссылочные типы данных:
+    //{...}, [...]
+</script>
+</body>
+</html>

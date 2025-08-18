@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Функция в обьектах и контексте this:
+    //функции могут находится в обьектах
+
+    let user = {
+        name: 'vasya',
+        age: 28,
+        greeting: function (msg) {
+            return `${msg} my name is ${this.name}`//this--это и есть название обьекта, с которым мы работаем
+        },
+        vitanny: (msg)=>`${msg} my age is ${this.age}`//this не работает со стрелочными функциями
+    }
+
+    console.log(user.greeting('hi'));
+    console.log(user.vitanny('hello'));
+</script>
+</body>
+</html>
