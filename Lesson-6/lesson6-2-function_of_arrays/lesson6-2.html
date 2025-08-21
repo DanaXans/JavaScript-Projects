@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Базовые функции массивов
+
+    //методы массивов:
+    let arr = [];
+    console.log(Array.isArray(arr));//позволяет удостоверится, является ли обьект массивом
+
+    //МЕНЯЕТ МАССИВ
+
+    console.log(arr.push('new element1'));  //добавляет новый елемент в конец массива
+    console.log(arr.push('new element2'));
+    console.log(arr.push('new element3'));
+    console.log(arr.push('new element4'));
+    console.log(arr.push('new element5'));
+    console.log(arr);
+
+    arr.pop();//вырезает последний елемент
+    console.log(arr.pop());//возвращает вырезаный елемент
+
+    arr.unshift('!!!');//добавляет елемент в начало массива. Также может вернуть инфу о новом размере массива=>
+    //=> console.log(arr.unshift('!!!'));
+    console.log(arr);
+
+    arr.shift();//удаляет елемент сначала
+    console.log(arr);
+
+    arr.join();//разделяет елементы между собой(по дефолту запятыми)
+    console.log(arr.join());
+
+    let nums = [11, 22, 33];
+    let concat = arr.concat(nums);
+
+    arr.concat(nums);//привязыввает первый массив(arr) ко второму (nums).
+    console.log(arr.concat(nums));
+    //При этом массив arr не меняется
+
+    console.log(nums.reverse());//делает реверс массива
+
+    console.log(concat);
+    concat.slice(0, 2);//нарезает массив с одного(указаного) индекса по другой не включно
+    console.log(concat.slice(0, 2));
+
+    let splice = concat.splice(0, 2);// указываем индекс елемента с которого будем удалять елементы и колличество их(можем передать несколько или n-е количество аргументов)
+    console.log(splice);
+    console.log(concat);
+    //если мы укажем третий, четвертый и больше елементов они будут добавляться на место удаленных елементов
+
+
+    let arrayConcat = ['arr', 'old element', 11, 22, 33, 44];
+    console.log(arrayConcat);
+
+    console.log(arrayConcat.includes(11));//вернет значение true, т. к там есть это значение
+</script>
+</body>
+</html>

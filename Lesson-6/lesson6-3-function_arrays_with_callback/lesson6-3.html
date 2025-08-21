@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Функции массивов с колбеками
+
+    let usersArray = [
+        {name: 'vasya', age: 28, status: true},
+        {name: 'anna', age: 32, status: false},
+        {name: 'olya', age: 20, status: true},
+        {name: 'andrey', age: 33, status: false},
+        {name: 'sasha', age: 25, status: true},
+        {name: 'max', age: 35, status: false},
+        {name: 'oleg', age: 23, status: true}
+    ];
+
+    usersArray.forEach(function (value, index, array) {
+        console.log(value);
+    });//как аргумент передаем функцию, которая будет принимать 3 обьекта:(value,index,array)
+
+    usersArray.forEach(value => console.log(value));//упрощенная форма и используемая чаще
+
+
+    //let filteredUsers = usersArray.filter(function (value) {
+    //     return value.age > 30;
+    //});
+
+    let filteredUsers = usersArray.filter(value => value.age > 30);//должно возвращать boolean;users Array не меняется
+    console.log(filteredUsers);
+
+
+    let mapedUsers = usersArray.map(function (value, index) {
+        return {
+            name: value.name,
+            age: value.age,
+            status: value.status,
+            id: index + 1,
+            //return{...value, id: index+1}; <= сокращенная версия
+            // ...=> синтаксис spread озволяет развернуть итерируемый обьект
+        }
+    })
+
+    // возвращаем обьект с помощью стрелочной функции:
+    // users.map((value, index) => {
+    // return {id: index+1, name: value.name, age:value.age, status: value.status}
+    // })
+
+    console.log(mapedUsers);
+
+    //let find = usersArray.find(value => value.name === 'olya');//находит и выводит только первый елемент
+    //console.log(find);
+
+    console.log(usersArray.every(value => value.status));//проверяет все ли елементы, например со статусом true
+
+    console.log(usersArray.some(value => value.status));//проверяет обьекты массива, есть ли хоть один обьект со статусом true
+
+
+    let sort = usersArray.sort((u1, u2) => {
+        return u1.age - u2.age//берет елементы от меньшего к большему
+    });
+    console.log(sort);
+
+
+    console.log(usersArray.sort((a, b) => {
+        if (a.name > b.name) {
+            return 1;
+        }
+        if (a.name < b.name) {
+            return -1;
+        }
+        if (a.name === b.name) {
+            return 0;
+        }
+    }));//сортирует в алфавитном порядке
+
+
+    console.log(usersArray.reduce((accumulator, user) => {
+        if (user.status) {
+            accumulator.statT.push(user);
+        } else {
+            accumulator.statF.push(user);
+        }
+        return accumulator;
+    }, {statT: [], statF: []}));
+</script>
+</body>
+</html>
