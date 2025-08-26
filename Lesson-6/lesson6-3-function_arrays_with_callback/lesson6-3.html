@@ -86,6 +86,26 @@
         }
         return accumulator;
     }, {statT: [], statF: []}));
+
+
+    let a = [1, 2, 3, 4];
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum = sum + a[i];
+    }
+    console.log(sum);//10
+
+    //reduce--метод, позволяющий применять функцию к массиву
+
+    //prev--вычисляемое значение
+    //до старта равно prev=a[0] !!!!
+    let b = a.reduce(function (prev, item /*index*/) {
+        return prev + item;
+    }, 0);
+    console.log(b);
+
+    a = [3, 1, 3, 4, 6, 4, 3, 5, 6];
+
 </script>
 </body>
 </html>

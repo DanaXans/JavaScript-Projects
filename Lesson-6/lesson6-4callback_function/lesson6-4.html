@@ -7,7 +7,36 @@
 <body>
 <script>
     //callback функции
+    //Коллбэк - это когда есть какая то главная функция, в аргументы которой ты передаешь другую функцию
+    function foo(bar) {
+        console.log(bar);
+    }
 
+    function h() {
+        return 100;
+    }
+
+    foo(h());//вызов функции в функии
+    //если не вызывать функцию в функии, а просто передавать ее, то мы выведем в консоли описание второй функции
+    foo(h);
+
+    function foob(callback) {
+        console.log(callback());//вызов функции ппереместился сюда
+    }
+
+    foob(function () {
+        return 100;
+    })
+
+    function calc(a, b, callback) {
+        return callback(a, b);
+    }
+
+    //                                      a     b     callback
+    console.log(calc(10, 20, (a, b) => {
+        return a + b;
+    }));
+    console.log(calc(10, 20, (a, b) => a - b));
 </script>
 </body>
 </html>
