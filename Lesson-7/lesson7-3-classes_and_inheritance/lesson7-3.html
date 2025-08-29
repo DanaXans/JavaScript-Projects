@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Классы и наследование
+    class User {
+
+        //constructor--это та же самая функция
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+
+        greeting() {
+            return `Hello, my name is ${this.name}!`
+        }
+    }
+
+    let userVasya = new User('Vasya', 31);
+    console.log(userVasya);
+
+    console.log(userVasya.greeting());
+
+    //функция отличается от метода тем, что функция это просто обьект, находящийся где-то. Метод же--это функция находящаяся на границе класса
+
+
+    //////////////////////////////////////////////////////////////
+
+    //static() метод это--используется для определения статических методов и статических свойств в классах.=>
+    //=> Такие методы и свойства принадлежат самому классу, а не его экземплярам.
+    class User1 {
+
+        constructor(name, age) {
+            this.name = name; //ключивое слово this будет ссылаться на class, а name будет ссылаться на User1
+            this.age = age;
+        }
+
+
+        static greeting() {
+            return `Hello, my name is ${this.name}!`
+        }
+    }
+
+    console.log(User1.greeting());
+
+
+    //////////////////////////////////////////////////////////////
+
+    class User2 {
+
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        work() {//является методом
+            return `Work in process`;
+        }
+    }
+
+
+    class Customer extends User2 {
+        //мы можем наследовать логику из какого-то другого существующего class с помощью ключивого слова extends
+
+
+        constructor(name, age, password) {//мы расширились в помощью user2Б взяв у него name, age
+            super(name, age);// super то же самое что и this, но в материнском классе
+            this.password = password;
+        }
+
+        work() {
+            return super.work();//берем work из материнского класса (User2)
+        }
+    }
+
+    let customerAnna = new Customer('Anna', 25, '1111')
+    console.log(customerAnna);
+    console.log(customerAnna.work());
+
+    ///////////////////////////////////////////////////////
+
+
+    function User3(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    function Customer1(name, age, password) {
+        User3.apply(this, arguments);//в User3 вместо this мы будем использовать будущего Customer1, к которому мы обратимся через this
+        //arguments--это уже существующие аргументы name, age в User3
+        this.password = password;
+    }
+    let userMaria = new Customer1('Maria', 31, '7777');
+    console.log(userMaria);
+</script>
+</body>
+</html>
