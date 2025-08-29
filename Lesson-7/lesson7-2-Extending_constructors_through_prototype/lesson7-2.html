@@ -5,6 +5,51 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    //создаем функцию-конструктор:
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
+
+    //применение метода rototype:
+    //позволяет добавлять характеристики
+    User.prototype.greeting = function () {
+        return `hello , my name is ${this.name}!`
+    };
+    //после создания функции с использованием prototype, мы можем создавать users,
+    // которым будем присваивать новую характеристику:
+    let userVasya = new User('vasya', 25);
+    console.log(userVasya.greeting())
+    let userSasha = new User('sasha', 26);
+    console.log(userSasha.greeting())
+
+
+    //применение метода apply:
+    let userMaria = new User('Maria', 29);//создали нового user:  userMaria, у которого нет greeting
+
+    //с помощью функции добавили greeting юзеру userMaria
+    userMaria.greeting = function (msg) {
+        return `HELLO ${msg}, MY NAME IS ${this.name}!`;
+    }
+    console.log(userMaria.greeting());
+
+    let userAnna = new User('Anna', 27);//создаем нового юзера=>
+    console.log(userMaria.greeting.apply(userAnna, ['THERE']));//=> и добавляем одалживаем характеристику greeting у userMaria
+    // также метод apply может передавать РЕСТ АРГУМЕНТЫ(первый обьект, второй массив в которой можем передать n--е количество значение)
+
+
+    //пременение метода call:
+    let userLia = new User('Lia', 30);
+    console.log(userMaria.greeting.call(userLia, 'ThErE'));// отличается от метода apply тем, что может принимать больше двух аргументов
+
+
+    //применение метода bind:
+    //делает копию
+    let userCopy = new User('Copy', 20);
+    let greetingCopy = userMaria.greeting.bind(userCopy, 'copy');//=> на основе greeting создаем копию и именуем ее переменной(greetingCopy)
+    console.log(greetingCopy());
+</script>
 </body>
 </html>
