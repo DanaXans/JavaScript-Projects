@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Map коллекции
+    //Map--это асоциация ключа со значением
+    let map = new Map();//вызов конструктора
+
+    let marik={id: 'marik'};//чтобы вызвать асоциацию, являющуюся обьктом, нужно вынести ее в переменную
+
+    map.set(
+        marik,
+        {name: 'makar', surname: 'Kokos'}
+    );
+
+    //////////////////////////////////////////////////////////////////
+
+                //ключ(1)  значение(one)
+    map.set('likar', {name: 'roma', surname: 'oganov'});// чтобы добавить в map ассоциацию одного обьекта с другим, используем set
+
+    map.set('petya', {name: 'peter', surname: 'petrov'});
+    map.set('petya', {name: 'afsgd', surname: 'wqere'});// если мы добавим ассоциацию с уже существующим ключем, то он вытеснит/перезапишет его
+    map.set(3, 'three');
+    console.log(map);
+
+    console.log(map.get(3));// выведет то, что лежит под ключем(1)
+    console.log(map.get('likar'));
+    console.log(map.get(marik));//вызов ключа, который является обьектом
+
+    ///////////////////////////////////////////////////////////////////
+
+    console.log(map.delete(3));// удаляет ассоциацию
+    //map.clear()// чистит map полностью
+    console.log(map.size);//показывает размер map
+
+    console.log(map.keys());// показывает все ключи в map
+
+    let from=Array.from(map.keys());//делаем массив
+    console.log(from);
+
+    console.log(map.values());// выводит все значения
+    console.log(Array.from(map.values()));
+</script>
+</body>
+</html>
