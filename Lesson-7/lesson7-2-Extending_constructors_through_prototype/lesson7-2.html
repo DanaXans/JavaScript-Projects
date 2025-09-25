@@ -50,6 +50,18 @@
     let userCopy = new User('Copy', 20);
     let greetingCopy = userMaria.greeting.bind(userCopy, 'copy');//=> на основе greeting создаем копию и именуем ее переменной(greetingCopy)
     console.log(greetingCopy());
+
+
+    function Item(name, age) {
+        this.name = name;
+        this.age = age;
+        this.message = function() {
+            return `Hello world!` ;
+        };
+    }
+
+    const item1 = new Item('ajaja', 21)
+    console.log(item1.message());
 </script>
 </body>
 </html>
