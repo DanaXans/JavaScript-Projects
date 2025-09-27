@@ -80,9 +80,9 @@ console.log(clients);
 
 let clientArr = [
     new Client(2, 'Dina', 'Oganova', 'sjhshg@djdhdggs', '+92382726378', [{
-    title: 'milk',
-    price: 79
-}, {title: 'oranges', price: 79}]),
+        title: 'milk',
+        price: 79
+    }, {title: 'oranges', price: 79}]),
     new Client(8, 'Dana', 'Safonova', 'wegsgv@rhykljt', '+345y456456', [{title: 'milk', price: 125}, {
         title: 'kiwi',
         price: 92
@@ -107,12 +107,18 @@ let clientArr = [
     new Client(63, 'Andrey', 'Krapivka', 'wegrgre@egwgs', '+9655463565', [{
         title: 'sausages',
         price: 193
-    }, {title: 'mango', price: 105}, {title: 'meat', price: 157}, {title: 'sausages', price: 187}, {title: 'oranges', price: 82}]),
+    }, {title: 'mango', price: 105}, {title: 'meat', price: 157}, {title: 'sausages', price: 187}, {
+        title: 'oranges',
+        price: 82
+    }]),
     new Client(93, 'Kokos', 'Kokosov', 'grrge@rghrge', '+452354534556', [{title: 'milk', price: 125}, {
         title: 'oranges',
         price: 79
     }, {title: 'sausages', price: 230}]),
-    new Client(3, 'Liza', 'Riks', 'rgegee@egregerg', '+436363634633', [{title: 'rice', price: 70}, {title: 'mango', price: 143}, {title: 'oranges', price: 79}, {title: 'sausages', price: 210}])
+    new Client(3, 'Liza', 'Riks', 'rgegee@egregerg', '+436363634633', [{title: 'rice', price: 70}, {
+        title: 'mango',
+        price: 143
+    }, {title: 'oranges', price: 79}, {title: 'sausages', price: 210}])
 ];
 
 clientArr.sort((a, b) => {
@@ -270,8 +276,7 @@ Array.prototype.myForEach = function (array, callback) {
 }
 const numbers = [73, 12, 10, 7, 6, 42];
 
-console.log(numbers.myForEach(numbers, (number, i, array) => console.log(number, i, array)));
-
+numbers.myForEach(numbers, (number, i, array) => console.log(number, i, array));
 
 Array.prototype.myFilter = (array, callback) => {
     const result = [];
