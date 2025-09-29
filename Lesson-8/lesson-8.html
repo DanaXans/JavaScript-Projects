@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+        const user = {
+        name: 'Jenkins',
+        age: 32
+        }
+
+    const user1=Object.defineProperty(
+        user,
+        'id',
+        {
+            value: 100500,
+            writable: false,//позволяет менять свойства, если true
+            enumerable: false,//выводит проитерированные свойство, если true
+            configurable: false,//по умолчанию true, в случае если мы вновь захотим вызвать функцию Object.defineProperty, то мы сможем менять обьект
+        }
+    )
+    console.log(user1);
+    user.id = 1200300;
+    console.log(user1);
+
+    for(const userKey in user1) {
+        console.log(userKey)
+    }
+///////////////////////////////////////////////
+//     const person = Object.create({}, {
+//         name: {
+//             value: 'Anna',
+//             writable: false,//Позволяет изменить значение свойства,усли true
+//             enumerable: false,//Позволяет проитерировать свойства обьекта, true
+//             configurable: false,//озволяет удалить свойство, если true
+//         },
+//         age: {
+//             value: 20,
+//         }
+//     })
+//     console.log(person)
+//     person.name = 'Dana';
+//     console.log(person.name)
+//
+//     for (const personKey in person) {
+//         console.log(personKey)
+//     }
+//     delete person.name
+//     console.log(person.name)
+</script>
+</body>
+</html>
