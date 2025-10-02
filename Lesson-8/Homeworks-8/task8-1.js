@@ -71,4 +71,3 @@ function check(object) {
 console.log(check(object));
 //console.log(object.greeting());
 
-
