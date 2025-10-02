@@ -50,8 +50,8 @@ const object = {
 }
 
 function check(object) {
-    const functions = [];
     if (object) {
+        const functions = [];
         Object.keys(object).forEach(key => {
             if (typeof object[key] === 'function') {
                 const copyFunction = object[key].bind({});
