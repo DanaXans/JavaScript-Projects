@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    background: #656565;
+    margin: 10px;
+    height: 70px;
+    width: 195vh;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.month {
+    width: 400px;
+    background: #a69595;
+    margin-left: 10px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 22px;
+}
+
+.alsoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
