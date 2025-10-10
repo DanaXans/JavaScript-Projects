@@ -1,39 +1,57 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
 }
-
-.wrapper {
+body{
+    background: #9a9a9a;
+}
+.wrapperMenu {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .menu {
-    background: #656565;
+    background: #c5c5c5;
     margin: 10px;
     height: 70px;
     width: 195vh;
+    font-weight: bold;
     font-size: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
+.wrapperMonthAndHour {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .month {
-    width: 400px;
-    background: #a69595;
-    margin-left: 10px;
-    padding-top: 10px;
+    background: #dedede;
+    margin: 10px;
+    height: 70px;
+    width: 195vh;
+    font-size: 25px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    font-size: 22px;
+    align-items: center;
 }
-
-.alsoWrapper {
+.wrapperModule {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: space-around;
+}
+.ulModules{
+    width: 500px;
+}
+.liModules{
+    background: #dedede;
+    font-size: 22px;
+    padding-left: 25px;
+    margin: 5px;
+    height: 35px;
+    display: flex;
+    align-items: center;
 }

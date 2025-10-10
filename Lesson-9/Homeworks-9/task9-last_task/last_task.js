@@ -69,11 +69,11 @@ let coursesArray = [
 ];
 
 
-const wrapper = document.createElement('div');
-wrapper.classList.add('wrapper');
-document.body.appendChild(wrapper);
+const wrapperMenu = document.createElement('div');
+wrapperMenu.classList.add('wrapperMenu');
+document.body.appendChild(wrapperMenu);
 ///////////////////////////////////////////////////////////////
-const titleDiv = document.getElementsByClassName('wrapper')[0];
+const titleDiv = document.getElementsByClassName('wrapperMenu')[0];
 
 for (const courseTitle of coursesArray) {
     const menu = document.createElement('div');
@@ -82,17 +82,37 @@ for (const courseTitle of coursesArray) {
     titleDiv.appendChild(menu);
 }
 ///////////////////////////////////////////////////////////////
-const wrapperOfMonth = document.createElement('div')
-wrapperOfMonth.classList.add('alsoWrapper');
-document.body.appendChild(wrapperOfMonth);
-
+const wrapperMonthAndHour = document.createElement('div')
+wrapperMonthAndHour.classList.add('wrapperMonthAndHour');
+document.body.appendChild(wrapperMonthAndHour);
 ///////////////////////////////////////////////////////////////
-const monthDiv = document.getElementsByClassName('alsoWrapper')[0];
+const monthDiv = document.getElementsByClassName('wrapperMonthAndHour')[0];
 
-for (const courseMonth of coursesArray) {
+for (const MonthAndHour of coursesArray) {
     const month = document.createElement('div');
     month.classList.add('month');
-    month.innerText = `Month Duration:${courseMonth.monthDuration}`;
-   wrapperOfMonth.appendChild(month)
+    month.innerText = `Month Duration: ${MonthAndHour.monthDuration}
+    Hour Duration: ${MonthAndHour.hourDuration}`;
+    wrapperMonthAndHour.appendChild(month)
     monthDiv.appendChild(month);
+}
+/////////////////////////////////////////////////////////////////
+const wrapperModule = document.createElement('div');
+wrapperModule.classList.add('wrapperModule');
+document.body.appendChild(wrapperModule);
+
+const modulesDiv = document.getElementsByClassName('wrapperModule')[0];
+
+for (let course of coursesArray) {
+    const courseTitle = course.modules;
+    const ul = document.createElement('ul');
+    ul.classList.add('ulModules');
+    for (const courseModule of courseTitle) {
+        const module = document.createElement('li');
+        module.classList.add('liModules');
+        module.innerText = courseModule;
+        ul.appendChild(module);
+        wrapperModule.appendChild(ul);
+        modulesDiv.appendChild(ul);
+    }
 }
