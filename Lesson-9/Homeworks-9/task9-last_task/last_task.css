@@ -7,6 +7,7 @@ body{
     background: #9a9a9a;
 }
 .wrapperMenu {
+    margin-top:90px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -42,6 +43,8 @@ body{
 .wrapperModule {
     display: flex;
     justify-content: space-around;
+    background: #8c8c8c;
+    height: 555px;
 }
 .ulModules{
     width: 500px;
@@ -50,7 +53,7 @@ body{
     background: #dedede;
     font-size: 22px;
     padding-left: 25px;
-    margin: 5px;
+    margin: 7px;
     height: 35px;
     display: flex;
     align-items: center;
