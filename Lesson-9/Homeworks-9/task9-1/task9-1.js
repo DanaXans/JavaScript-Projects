@@ -11,7 +11,7 @@ div1.classList.add("wrap", "collapse", "alpha", "beta");
 
 div1.innerText = "Hello World!";
 div1.style.backgroundColor = "#8b9dea";
-div1.style.color = "#151833";
+div1.style.color = "#ffffff";
 div1.style.fontSize = "20px";
 
 document.body.appendChild(div1);
